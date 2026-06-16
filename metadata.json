@@ -1,0 +1,6 @@
+{
+  "name": "Lar Plásticos B2B Landing Page",
+  "description": "Página de alta conversão B2B focada em pallets de plástico (PEAD) de alta durabilidade, adequados à ANVISA e sustentáveis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
