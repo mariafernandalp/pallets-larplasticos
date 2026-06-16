@@ -7,3 +7,4 @@ coverage/
 .env*
 !.env.example
 exemplo_ploomes.js
+.vercel
