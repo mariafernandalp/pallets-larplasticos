@@ -5,17 +5,20 @@ const videos = [
   {
     title: "Pallet Plástico vs Madeira",
     videoId: "madeiravsplastico",
-    hasVideoFile: true
+    hasVideoFile: true,
+    poster: "/palletmadeira.jpg"
   },
   {
     title: "Heavy e Eco Pallet",
     videoId: "heavypallet",
-    hasVideoFile: true
+    hasVideoFile: true,
+    poster: "/heavypallet.png"
   },
   {
     title: "Flex Pallet",
     videoId: "flexpalletaba",
-    hasVideoFile: true
+    hasVideoFile: true,
+    poster: "/flexpallets.jpg"
   }
 ];
 
@@ -57,10 +60,12 @@ export default function VideoShowcase() {
               <div className="w-full aspect-[9/16] bg-slate-200 rounded-2xl overflow-hidden relative shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2">
                 {video.hasVideoFile ? (
                   <video 
-                    src={`/${video.videoId}.mp4`} 
+                    src={`/${video.videoId}.mp4#t=0.001`} 
+                    poster={video.poster}
                     className="w-full h-full object-cover" 
                     controls 
                     playsInline 
+                    preload="metadata"
                   />
                 ) : (
                   <>
