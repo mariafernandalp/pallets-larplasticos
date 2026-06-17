@@ -329,15 +329,15 @@ export default function Products() {
             <ArrowLeft className="w-6 h-6" />
           </button>
 
-          <div className="relative -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+          <div className="relative sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
             <div 
               ref={scrollRef}
               onScroll={checkScroll}
-              className="flex overflow-x-auto gap-6 sm:gap-8 pb-8 snap-x snap-mandatory hide-scrollbar"
+              className="flex flex-col sm:flex-row sm:overflow-x-auto gap-6 sm:gap-8 pb-8 sm:snap-x sm:snap-mandatory hide-scrollbar"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {products.map((product, index) => (
-                <div key={index} className="w-[85vw] sm:w-[350px] shrink-0 snap-start flex">
+                <div key={index} className="w-full sm:w-[350px] sm:shrink-0 sm:snap-start flex">
                   <div className="w-full h-full">
                     <ProductCard product={product} />
                   </div>
