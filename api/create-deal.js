@@ -1,7 +1,7 @@
 const PLOOMES = {
   apiKey: process.env.PLOOMES_API_KEY,
   baseUrl: 'https://api2.ploomes.com',
-  originId: 120001462,
+  originId: 120000062,
   pipelineId: 40059663,
   stageId: 40291620,
   fieldTelefone: 'deal_03E33AAB-3BB7-4A9F-875F-0A62A739AACE',
@@ -31,7 +31,7 @@ export default async function handler(req, res) {
       ? '55' + telefone
       : telefone;
 
-    const titulo = `LEADS META REVENDA - ${nome || 'Sem nome'} - ${telefoneFinal || 'sem telefone'}`;
+    const titulo = `Landing Page - Pallets - ${nome || 'Sem nome'} - ${telefoneFinal || 'sem telefone'}`;
     const nomeEmpresa = empresa ? `${nome} - ${empresa}` : nome;
 
     const payload = {
