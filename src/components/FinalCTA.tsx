@@ -25,6 +25,11 @@ export default function FinalCTA() {
 
       await res.json();
       setStatus('success');
+
+      // Dispara o Pixel do Meta (Facebook) para evento de Lead
+      if (typeof window !== 'undefined' && (window as any).fbq) {
+        (window as any).fbq('track', 'Lead');
+      }
     } catch {
       setStatus('error');
     }
